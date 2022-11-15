@@ -25,6 +25,10 @@ public class AppConfig {
    @Autowired
    private Environment env;
 
+   AppConfig(Environment env){
+      this.env = env;
+   }
+//   https://otus.ru/nest/post/171/ - разве @Autowired не подтягивает всё сама, без необходимости конструктора или сеттера?
    @Bean
    public DataSource getDataSource() {
       DriverManagerDataSource dataSource = new DriverManagerDataSource();

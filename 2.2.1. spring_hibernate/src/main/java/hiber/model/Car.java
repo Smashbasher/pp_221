@@ -7,12 +7,12 @@ import java.util.Objects;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
     @Column(name = "model")
-    String model;
+    private String model;
     @Column(name = "series")
-    int series;
+    private int series;
 
     @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
     private User user;
