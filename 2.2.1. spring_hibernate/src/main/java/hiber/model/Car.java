@@ -1,4 +1,5 @@
 package hiber.model;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -16,6 +17,7 @@ public class Car {
 
     @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
     private User user;
+
     public Car() {
     }
 
@@ -27,6 +29,7 @@ public class Car {
     public User getUser() {
         return user;
     }
+
     public String getModel() {
         return model;
     }
@@ -42,6 +45,7 @@ public class Car {
     public void setSeries(int series) {
         this.series = series;
     }
+
     public void setUser(User user) {
         this.user = user;
     }
