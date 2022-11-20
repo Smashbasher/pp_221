@@ -24,15 +24,14 @@ public class User {
     @JoinColumn(name = "car_id")
     private Car car;
 
+    public User() {
+    }
     public Car getCar() {
         return car;
     }
 
     public void setCar(Car car) {
         this.car = car;
-    }
-
-    public User() {
     }
 
     public User(String firstName, String lastName, String email) {
@@ -95,7 +94,9 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(email, user.email) && Objects.equals(car, user.car);
+        return Objects.equals(id, user.id) && Objects.equals(firstName, user.firstName)
+                && Objects.equals(lastName, user.lastName) && Objects.equals(email, user.email)
+                && Objects.equals(car, user.car);
     }
 
     @Override

@@ -55,7 +55,8 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return id == car.id && series == car.series && Objects.equals(model, car.model) && Objects.equals(user, car.user);
+        return id == car.id && series == car.series && Objects.equals(model, car.model)
+                && Objects.equals(user, car.user);
     }
 
     @Override
