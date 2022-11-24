@@ -26,13 +26,6 @@ public class User {
 
     public User() {
     }
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
-    }
 
     public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
@@ -44,6 +37,14 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.car = car;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
         this.car = car;
     }
 
@@ -79,15 +80,6 @@ public class User {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -102,5 +94,22 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, email, car);
+    }
+
+    @Override
+    public String toString() {
+        return "User{"
+                +  "id="
+                + id
+                +  ", firstName='"
+                + firstName
+                + '\''
+                + ", lastName='"
+                + lastName
+                + '\''
+                + ", email='"
+                + email
+                + '\''
+                + '}';
     }
 }
