@@ -21,12 +21,12 @@ public class Car {
     public Car() {
     }
 
-    public Car(String model, int series) {
+    private Car(String model, int series) {
         this.model = model;
         this.series = series;
     }
 
-    public User getUser() {
+    private User getUser() {
         return user;
     }
 
